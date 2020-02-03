@@ -5774,8 +5774,5 @@ extern const struct wpa_driver_ops wpa_driver_atheros_ops;
 #ifdef CONFIG_DRIVER_NONE
 extern const struct wpa_driver_ops wpa_driver_none_ops; /* driver_none.c */
 #endif /* CONFIG_DRIVER_NONE */
-#ifdef CONFIG_DRIVER_RTW
-extern const struct wpa_driver_ops wpa_driver_rtw_ops; /* driver_rtw.c */
-#endif /* CONFIG_DRIVER_RTW */
 
 #endif /* DRIVER_H */
