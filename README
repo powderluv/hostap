@@ -1,3 +1,7 @@
+Add support for rtl driver from:
+https://github.com/pritambaral/hostapd-rtl871xdrv
+
+
 wpa_supplicant and hostapd
 --------------------------
 
