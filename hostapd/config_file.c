@@ -2879,6 +2879,8 @@ static int hostapd_config_fill(struct hostapd_config *conf,
 		bss->wpa_gmk_rekey = atoi(pos);
 	} else if (os_strcmp(buf, "wpa_ptk_rekey") == 0) {
 		bss->wpa_ptk_rekey = atoi(pos);
+	} else if (os_strcmp(buf, "noscan") == 0) {
+		conf->noscan = atoi(pos);
 	} else if (os_strcmp(buf, "wpa_group_update_count") == 0) {
 		char *endp;
 		unsigned long val = strtoul(pos, &endp, 0);
@@ -3411,6 +3413,8 @@ static int hostapd_config_fill(struct hostapd_config *conf,
 			bss->ieee80211w = 1;
 #endif /* CONFIG_OCV */
 #ifdef CONFIG_IEEE80211N
+	} else if (os_strcmp(buf, "noscan") == 0) {
+		conf->noscan = atoi(pos);
 	} else if (os_strcmp(buf, "ieee80211n") == 0) {
 		conf->ieee80211n = atoi(pos);
 	} else if (os_strcmp(buf, "ht_capab") == 0) {
