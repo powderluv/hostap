@@ -136,6 +136,10 @@ DRV_WPA_OBJS += ../src/drivers/driver_wext.o
 NEED_RFKILL=y
 endif
 
+ifdef CONFIG_OPENVSWITCH
+DRV_CFLAGS += -DCONFIG_OPENVSWITCH
+endif
+
 ifdef NEED_NETLINK
 DRV_OBJS += ../src/drivers/netlink.o
 endif
